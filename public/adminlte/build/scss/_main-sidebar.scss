@@ -158,12 +158,12 @@
     }
 
     &.nav-legacy {
-      .nav-treeview {      
+      .nav-treeview {
         .nav-treeview {
           padding-left: 2rem;
           margin-left: -1rem;
 
-          .text-sm & {          
+          .text-sm & {
             padding-left: 1rem;
             margin-left: -.5rem;
           }
@@ -375,7 +375,7 @@
     // Hover and active states
     &.menu-open > .nav-link,
     &:hover > .nav-link,
-    & > .nav-link:focus  {
+    & > .nav-link:focus {
       background-color: $sidebar-dark-hover-bg;
       color: $sidebar-dark-hover-color;
     }
@@ -478,7 +478,7 @@
 .sidebar-mini-md .main-sidebar:not(.sidebar-no-expand):hover,
 .sidebar-mini .main-sidebar.sidebar-focused,
 .sidebar-mini-md .main-sidebar.sidebar-focused {
- .nav-compact.nav-sidebar.nav-child-indent:not(.nav-flat) .nav-treeview {
+  .nav-compact.nav-sidebar.nav-child-indent:not(.nav-flat) .nav-treeview {
     padding-left: 1rem;
     margin-left: -.5rem;
   }
@@ -500,7 +500,7 @@
   }
 
   &:not(.nav-child-indent) {
-    .nav-treeview {  
+    .nav-treeview {
       .nav-item {
         > .nav-link {
           > .nav-icon {
@@ -675,7 +675,7 @@
 
         > .nav-icon {
           margin-left: calc(.55rem - 3px);
-          
+
           .text-sm & {
             margin-left: calc(.75rem - 3px);
           }
@@ -740,21 +740,21 @@
       }
 
       &.active {
-        > .nav-icon{
+        > .nav-icon {
           margin-left: .36rem;
         }
       }
     }
 
-    &.nav-child-indent {   
+    &.nav-child-indent {
       .nav-treeview {
         .nav-treeview {
           padding-left: 0;
           margin-left: 0;
         }
       }
-      }
     }
+  }
 
 
   .sidebar-mini.sidebar-collapse.text-sm &,
@@ -765,7 +765,7 @@
       }
 
       &.active {
-        > .nav-icon{
+        > .nav-icon {
           margin-left: calc(.75rem - 3px);
         }
       }
@@ -923,6 +923,7 @@
 .sidebar .form-inline .input-group {
   width: 100%;
 }
+
 .sidebar nav .form-inline {
   margin-bottom: .2rem;
 }
@@ -933,7 +934,8 @@
   &.sidebar-collapse .main-sidebar {
     margin-left: 0;
   }
-  .content-wrapper, 
+
+  .content-wrapper,
   .main-header,
   .main-footer {
     z-index: 9999;

@@ -11,39 +11,39 @@ const Treeview = (($) => {
    * ====================================================
    */
 
-  const NAME               = 'Treeview'
-  const DATA_KEY           = 'lte.treeview'
-  const EVENT_KEY          = `.${DATA_KEY}`
+  const NAME = 'Treeview'
+  const DATA_KEY = 'lte.treeview'
+  const EVENT_KEY = `.${DATA_KEY}`
   const JQUERY_NO_CONFLICT = $.fn[NAME]
 
   const Event = {
-    SELECTED     : `selected${EVENT_KEY}`,
-    EXPANDED     : `expanded${EVENT_KEY}`,
-    COLLAPSED    : `collapsed${EVENT_KEY}`,
+    SELECTED: `selected${EVENT_KEY}`,
+    EXPANDED: `expanded${EVENT_KEY}`,
+    COLLAPSED: `collapsed${EVENT_KEY}`,
     LOAD_DATA_API: `load${EVENT_KEY}`
   }
 
   const Selector = {
-    LI           : '.nav-item',
-    LINK         : '.nav-link',
+    LI: '.nav-item',
+    LINK: '.nav-link',
     TREEVIEW_MENU: '.nav-treeview',
-    OPEN         : '.menu-open',
-    DATA_WIDGET  : '[data-widget="treeview"]'
+    OPEN: '.menu-open',
+    DATA_WIDGET: '[data-widget="treeview"]'
   }
 
   const ClassName = {
-    LI               : 'nav-item',
-    LINK             : 'nav-link',
-    TREEVIEW_MENU    : 'nav-treeview',
-    OPEN             : 'menu-open',
+    LI: 'nav-item',
+    LINK: 'nav-link',
+    TREEVIEW_MENU: 'nav-treeview',
+    OPEN: 'menu-open',
     SIDEBAR_COLLAPSED: 'sidebar-collapse'
   }
 
   const Default = {
-    trigger              : `${Selector.DATA_WIDGET} ${Selector.LINK}`,
-    animationSpeed       : 300,
-    accordion            : true,
-    expandSidebar        : false,
+    trigger: `${Selector.DATA_WIDGET} ${Selector.LINK}`,
+    animationSpeed: 300,
+    accordion: true,
+    expandSidebar: false,
     sidebarButtonSelector: '[data-widget="pushmenu"]'
   }
 
@@ -53,7 +53,7 @@ const Treeview = (($) => {
    */
   class Treeview {
     constructor(element, config) {
-      this._config  = config
+      this._config = config
       this._element = element
     }
 
@@ -67,7 +67,7 @@ const Treeview = (($) => {
       const expandedEvent = $.Event(Event.EXPANDED)
 
       if (this._config.accordion) {
-        const openMenuLi   = parentLi.siblings(Selector.OPEN).first()
+        const openMenuLi = parentLi.siblings(Selector.OPEN).first()
         const openTreeview = openMenuLi.find(Selector.TREEVIEW_MENU).first()
         this.collapse(openTreeview, openMenuLi)
       }
@@ -110,11 +110,11 @@ const Treeview = (($) => {
           return
         }
       }
-      
+
       event.preventDefault()
 
       const parentLi = $relativeTarget.parents(Selector.LI).first()
-      const isOpen   = parentLi.hasClass(ClassName.OPEN)
+      const isOpen = parentLi.hasClass(ClassName.OPEN)
 
       if (isOpen) {
         this.collapse($(treeviewMenu), parentLi)
@@ -174,7 +174,7 @@ const Treeview = (($) => {
 
   $.fn[NAME] = Treeview._jQueryInterface
   $.fn[NAME].Constructor = Treeview
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Treeview._jQueryInterface
   }

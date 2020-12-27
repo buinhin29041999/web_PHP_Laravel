@@ -44,6 +44,7 @@
     @include sidebar-mini-breakpoint;
   }
 }
+
 @include media-breakpoint-down(md) {
   .sidebar-mini.sidebar-collapse .main-sidebar {
     box-shadow: none !important;
@@ -55,6 +56,7 @@
     @include sidebar-mini-breakpoint;
   }
 }
+
 @include media-breakpoint-down(sm) {
   .sidebar-mini-md.sidebar-collapse .main-sidebar {
     box-shadow: none !important;

@@ -1,5 +1,5 @@
 const Plugins = require('./DocsPlugins')
-const fse     = require('fs-extra')
+const fse = require('fs-extra')
 
 class Publish {
   constructor() {

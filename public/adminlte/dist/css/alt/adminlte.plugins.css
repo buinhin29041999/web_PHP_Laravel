@@ -62,14 +62,17 @@
   .fc-toolbar {
     flex-direction: column;
   }
+
   .fc-toolbar .fc-left {
     order: 1;
     margin-bottom: .5rem;
   }
+
   .fc-toolbar .fc-center {
     order: 0;
     margin-bottom: .375rem;
   }
+
   .fc-toolbar .fc-right {
     order: 2;
   }

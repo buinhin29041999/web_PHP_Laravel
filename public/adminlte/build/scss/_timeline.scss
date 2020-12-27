@@ -18,6 +18,7 @@
     top: 0;
     width: 4px;
   }
+
   // Element
   > div {
     &::before,
@@ -47,6 +48,7 @@
         font-size: 12px;
         padding: 10px;
       }
+
       // Header
       > .timeline-header {
         border-bottom: 1px solid $card-border-color;
@@ -60,6 +62,7 @@
           font-weight: 600;
         }
       }
+
       // Item body and footer
       > .timeline-body,
       > .timeline-footer {
@@ -70,6 +73,7 @@
         > img {
           margin: 10px;
         }
+
         > dl, ol, ul {
           margin: 0;
         }
@@ -81,6 +85,7 @@
         }
       }
     }
+
     // The icons at line
     > .fa,
     > .fas,
@@ -100,6 +105,7 @@
       width: 30px;
     }
   }
+
   // Time label
   > .time-label {
     > span {

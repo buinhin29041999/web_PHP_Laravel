@@ -45,7 +45,7 @@
     .custom-file-input:focus ~ .custom-file-label {
       border-color: lighten($color, 25%);
     }
-    
+
     .page-item {
       .page-link {
         color: $link-color;
@@ -70,7 +70,7 @@
       .sidebar {
         a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {
           color: $sidebar-dark-color;
-      
+
           @include hover {
             color: $sidebar-dark-hover-color;
           }

@@ -11,9 +11,9 @@ const CardRefresh = (($) => {
    * ====================================================
    */
 
-  const NAME               = 'CardRefresh'
-  const DATA_KEY           = 'lte.cardrefresh'
-  const EVENT_KEY          = `.${DATA_KEY}`
+  const NAME = 'CardRefresh'
+  const DATA_KEY = 'lte.cardrefresh'
+  const EVENT_KEY = `.${DATA_KEY}`
   const JQUERY_NO_CONFLICT = $.fn[NAME]
 
   const Event = {
@@ -50,7 +50,7 @@ const CardRefresh = (($) => {
 
   class CardRefresh {
     constructor(element, settings) {
-      this._element  = element
+      this._element = element
       this._parent = element.parents(Selector.CARD).first()
       this._settings = $.extend({}, Default, settings)
       this._overlay = $(this._settings.overlayTemplate)
@@ -120,7 +120,7 @@ const CardRefresh = (($) => {
 
       if (!data) {
         data = new CardRefresh($(this), _options)
-        $(this).data(DATA_KEY, typeof config === 'string' ? data: config)
+        $(this).data(DATA_KEY, typeof config === 'string' ? data : config)
       }
 
       if (typeof config === 'string' && config.match(/load/)) {
@@ -145,7 +145,7 @@ const CardRefresh = (($) => {
   })
 
   $(document).ready(function () {
-    $(Selector.DATA_REFRESH).each(function() {
+    $(Selector.DATA_REFRESH).each(function () {
       CardRefresh._jQueryInterface.call($(this))
     })
   })
@@ -157,7 +157,7 @@ const CardRefresh = (($) => {
 
   $.fn[NAME] = CardRefresh._jQueryInterface
   $.fn[NAME].Constructor = CardRefresh
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return CardRefresh._jQueryInterface
   }

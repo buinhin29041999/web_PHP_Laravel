@@ -5,9 +5,10 @@
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = global || self, factory(global.adminlte = {}));
-}(this, (function (exports) { 'use strict';
+    typeof define === 'function' && define.amd ? define(['exports'], factory) :
+      (global = global || self, factory(global.adminlte = {}));
+}(this, (function (exports) {
+  'use strict';
 
   /**
    * --------------------------------------------
@@ -1407,7 +1408,8 @@
       loadOnInit: true,
       responseType: '',
       overlayTemplate: '<div class="overlay"><i class="fas fa-2x fa-sync-alt fa-spin"></i></div>',
-      onLoadStart: function onLoadStart() {},
+      onLoadStart: function onLoadStart() {
+      },
       onLoadDone: function onLoadDone(response) {
         return response;
       }
@@ -1890,7 +1892,7 @@
   exports.TodoList = TodoList;
   exports.Treeview = Treeview;
 
-  Object.defineProperty(exports, '__esModule', { value: true });
+  Object.defineProperty(exports, '__esModule', {value: true});
 
 })));
 //# sourceMappingURL=adminlte.js.map

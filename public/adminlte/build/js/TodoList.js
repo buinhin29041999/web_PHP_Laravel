@@ -11,9 +11,9 @@ const TodoList = (($) => {
    * ====================================================
    */
 
-  const NAME               = 'TodoList'
-  const DATA_KEY           = 'lte.todolist'
-  const EVENT_KEY          = `.${DATA_KEY}`
+  const NAME = 'TodoList'
+  const DATA_KEY = 'lte.todolist'
+  const EVENT_KEY = `.${DATA_KEY}`
   const JQUERY_NO_CONFLICT = $.fn[NAME]
 
   const Selector = {
@@ -40,7 +40,7 @@ const TodoList = (($) => {
 
   class TodoList {
     constructor(element, config) {
-      this._config  = config
+      this._config = config
       this._element = element
 
       this._init()
@@ -50,7 +50,7 @@ const TodoList = (($) => {
 
     toggle(item) {
       item.parents('li').toggleClass(ClassName.TODO_LIST_DONE);
-      if (! $(item).prop('checked')) {
+      if (!$(item).prop('checked')) {
         this.unCheck($(item));
         return;
       }
@@ -58,11 +58,11 @@ const TodoList = (($) => {
       this.check(item);
     }
 
-    check (item) {
+    check(item) {
       this._config.onCheck.call(item);
     }
 
-    unCheck (item) {
+    unCheck(item) {
       this._config.onUnCheck.call(item);
     }
 

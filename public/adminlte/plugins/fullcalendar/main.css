@@ -595,6 +595,7 @@ from https://feathericons.com/ and built with IcoMoon
   font-weight: normal;
   font-style: normal;
 }
+
 .fc-icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "fcicons" !important;
@@ -877,11 +878,11 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
   /* Table & Day-Row Restyling
   --------------------------------------------------------------------------------------------------*/
   .fc th,
-.fc td,
-.fc hr,
-.fc thead,
-.fc tbody,
-.fc-row {
+  .fc td,
+  .fc hr,
+  .fc thead,
+  .fc tbody,
+  .fc-row {
     border-color: #ccc !important;
     background: #fff !important;
   }
@@ -889,13 +890,13 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
   /* kill the overlaid, absolutely-positioned components */
   /* common... */
   .fc-bg,
-.fc-bgevent-skeleton,
-.fc-highlight-skeleton,
-.fc-mirror-skeleton,
-.fc-bgevent-container,
-.fc-business-container,
-.fc-highlight-container,
-.fc-mirror-container {
+  .fc-bgevent-skeleton,
+  .fc-highlight-skeleton,
+  .fc-mirror-skeleton,
+  .fc-bgevent-container,
+  .fc-business-container,
+  .fc-highlight-container,
+  .fc-mirror-container {
     display: none;
   }
 
@@ -929,7 +930,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
   /* Undo month-view event limiting. Display all events and hide the "more" links
   --------------------------------------------------------------------------------------------------*/
   .fc-more-cell,
-.fc-more {
+  .fc-more {
     display: none !important;
   }
 
@@ -960,7 +961,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 
   /* don't display the horizontal lines */
   .fc-slats,
-.fc-time-grid hr {
+  .fc-time-grid hr {
     /* this hr is used when height is underused and needs to be filled */
     display: none !important;
     /* important overrides inline declaration */
@@ -1029,8 +1030,8 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
   --------------------------------------------------------------------------------------------------*/
   /* kill the scrollbars and allow natural height */
   .fc-scroller,
-.fc-day-grid-container,
-.fc-time-grid-container {
+  .fc-day-grid-container,
+  .fc-time-grid-container {
     /* */
     overflow: visible !important;
     height: auto !important;
@@ -1045,7 +1046,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
   /* Button Controls
   --------------------------------------------------------------------------------------------------*/
   .fc-button-group,
-.fc button {
+  .fc button {
     display: none;
     /* don't display any button-related controls */
   }

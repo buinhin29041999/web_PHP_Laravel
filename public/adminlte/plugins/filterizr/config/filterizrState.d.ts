@@ -1,9 +1,10 @@
 interface FilterizrState {
-    IDLE: 'IDLE';
-    FILTERING: 'FILTERING';
-    SORTING: 'SORTING';
-    SHUFFLING: 'SHUFFLING';
+  IDLE: 'IDLE';
+  FILTERING: 'FILTERING';
+  SORTING: 'SORTING';
+  SHUFFLING: 'SHUFFLING';
 }
+
 /**
  * Possible animation states for Filterizr
  */

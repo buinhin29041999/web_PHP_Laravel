@@ -11,9 +11,9 @@ const Dropdown = (($) => {
    * ====================================================
    */
 
-  const NAME               = 'Dropdown'
-  const DATA_KEY           = 'lte.dropdown'
-  const EVENT_KEY          = `.${DATA_KEY}`
+  const NAME = 'Dropdown'
+  const DATA_KEY = 'lte.dropdown'
+  const EVENT_KEY = `.${DATA_KEY}`
   const JQUERY_NO_CONFLICT = $.fn[NAME]
 
   const Selector = {
@@ -28,8 +28,7 @@ const Dropdown = (($) => {
     DROPDOWN_RIGHT: 'dropdown-menu-right'
   }
 
-  const Default = {
-  }
+  const Default = {}
 
 
   /**
@@ -39,7 +38,7 @@ const Dropdown = (($) => {
 
   class Dropdown {
     constructor(element, config) {
-      this._config  = config
+      this._config = config
       this._element = element
     }
 
@@ -48,11 +47,11 @@ const Dropdown = (($) => {
     toggleSubmenu() {
       this._element.siblings().show().toggleClass("show")
 
-      if (! this._element.next().hasClass('show')) {
+      if (!this._element.next().hasClass('show')) {
         this._element.parents('.dropdown-menu').first().find('.show').removeClass("show").hide()
       }
 
-      this._element.parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+      this._element.parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
         $('.dropdown-submenu .show').removeClass("show").hide()
       })
     }
@@ -83,14 +82,14 @@ const Dropdown = (($) => {
             elm.css('right', 0)
           }
         }
-      }  
+      }
     }
 
     // Static
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        let data      = $(this).data(DATA_KEY)
+        let data = $(this).data(DATA_KEY)
         const _config = $.extend({}, Default, $(this).data())
 
         if (!data) {
@@ -110,17 +109,17 @@ const Dropdown = (($) => {
    * ====================================================
    */
 
-  $(Selector.DROPDOWN_MENU + ' ' + Selector.DROPDOWN_TOGGLE).on("click", function(event) {
+  $(Selector.DROPDOWN_MENU + ' ' + Selector.DROPDOWN_TOGGLE).on("click", function (event) {
     event.preventDefault()
     event.stopPropagation()
 
     Dropdown._jQueryInterface.call($(this), 'toggleSubmenu')
   });
 
-  $(Selector.NAVBAR + ' ' + Selector.DROPDOWN_TOGGLE).on("click", function(event) {
+  $(Selector.NAVBAR + ' ' + Selector.DROPDOWN_TOGGLE).on("click", function (event) {
     event.preventDefault()
 
-    setTimeout(function() {
+    setTimeout(function () {
       Dropdown._jQueryInterface.call($(this), 'fixPosition')
     }, 1)
   });

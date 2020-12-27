@@ -122,13 +122,13 @@ declare module 'popper.js' {
     getBoundingClientRect():
       | ClientRect
       | {
-          width: number,
-          height: number,
-          top: number,
-          right: number,
-          bottom: number,
-          left: number,
-        },
+      width: number,
+      height: number,
+      top: number,
+      right: number,
+      bottom: number,
+      left: number,
+    },
   };
 
   declare type Instance = {
@@ -152,5 +152,6 @@ declare module 'popper.js' {
     ): Instance;
   }
 
-  declare module.exports: Class<Popper>;
+  declare module .exports: Class<Popper>
+;
 }

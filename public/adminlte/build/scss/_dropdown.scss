@@ -85,7 +85,6 @@
 }
 
 
-
 // Dropdown Sizes
 .dropdown-menu-xl {
   max-width: 420px;
@@ -152,6 +151,7 @@
 .navbar-custom-menu > .navbar-nav {
   > li {
     position: relative;
+
     > .dropdown-menu {
       position: absolute;
       right: 0;
@@ -163,8 +163,10 @@
 @include media-breakpoint-down(sm) {
   .navbar-custom-menu > .navbar-nav {
     float: right;
+
     > li {
       position: static;
+
       > .dropdown-menu {
         position: absolute;
         right: 5%;
@@ -179,7 +181,7 @@
 // User Menu
 .navbar-nav > .user-menu {
   > .nav-link:after {
-    content:none;
+    content: none;
   }
 
   > .dropdown-menu {

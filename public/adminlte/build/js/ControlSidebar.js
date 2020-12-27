@@ -11,11 +11,11 @@ const ControlSidebar = (($) => {
    * ====================================================
    */
 
-  const NAME               = 'ControlSidebar'
-  const DATA_KEY           = 'lte.controlsidebar'
-  const EVENT_KEY          = `.${DATA_KEY}`
+  const NAME = 'ControlSidebar'
+  const DATA_KEY = 'lte.controlsidebar'
+  const EVENT_KEY = `.${DATA_KEY}`
   const JQUERY_NO_CONFLICT = $.fn[NAME]
-  const DATA_API_KEY       = '.data-api'
+  const DATA_API_KEY = '.data-api'
 
   const Event = {
     COLLAPSED: `collapsed${EVENT_KEY}`,
@@ -50,7 +50,7 @@ const ControlSidebar = (($) => {
 
   const Default = {
     controlsidebarSlide: true,
-    scrollbarTheme : 'os-theme-light',
+    scrollbarTheme: 'os-theme-light',
     scrollbarAutoHide: 'l',
   }
 
@@ -62,7 +62,7 @@ const ControlSidebar = (($) => {
   class ControlSidebar {
     constructor(element, config) {
       this._element = element
-      this._config  = config
+      this._config = config
 
       this._init()
     }
@@ -73,7 +73,7 @@ const ControlSidebar = (($) => {
       // Show the control sidebar
       if (this._config.controlsidebarSlide) {
         $('html').addClass(ClassName.CONTROL_SIDEBAR_ANIMATE)
-        $('body').removeClass(ClassName.CONTROL_SIDEBAR_SLIDE).delay(300).queue(function(){
+        $('body').removeClass(ClassName.CONTROL_SIDEBAR_SLIDE).delay(300).queue(function () {
           $(Selector.CONTROL_SIDEBAR).hide()
           $('html').removeClass(ClassName.CONTROL_SIDEBAR_ANIMATE)
           $(this).dequeue()
@@ -90,8 +90,8 @@ const ControlSidebar = (($) => {
       // Collapse the control sidebar
       if (this._config.controlsidebarSlide) {
         $('html').addClass(ClassName.CONTROL_SIDEBAR_ANIMATE)
-        $(Selector.CONTROL_SIDEBAR).show().delay(10).queue(function(){
-          $('body').addClass(ClassName.CONTROL_SIDEBAR_SLIDE).delay(300).queue(function(){
+        $(Selector.CONTROL_SIDEBAR).show().delay(10).queue(function () {
+          $('body').addClass(ClassName.CONTROL_SIDEBAR_SLIDE).delay(300).queue(function () {
             $('html').removeClass(ClassName.CONTROL_SIDEBAR_ANIMATE)
             $(this).dequeue()
           })
@@ -130,7 +130,7 @@ const ControlSidebar = (($) => {
 
       $(window).scroll(() => {
         if ($('body').hasClass(ClassName.CONTROL_SIDEBAR_OPEN) || $('body').hasClass(ClassName.CONTROL_SIDEBAR_SLIDE)) {
-            this._fixScrollHeight()
+          this._fixScrollHeight()
         }
       })
     }
@@ -179,7 +179,7 @@ const ControlSidebar = (($) => {
           $(Selector.CONTROL_SIDEBAR).css('top', heights.header);
           $(Selector.CONTROL_SIDEBAR + ', ' + Selector.CONTROL_SIDEBAR + ' ' + Selector.CONTROL_SIDEBAR_CONTENT).css('height', heights.window - (heights.header + heights.footer))
         } else if (positions.bottom <= heights.footer) {
-          if (footerFixed === false) {  
+          if (footerFixed === false) {
             $(Selector.CONTROL_SIDEBAR).css('bottom', heights.footer - positions.bottom);
             $(Selector.CONTROL_SIDEBAR + ', ' + Selector.CONTROL_SIDEBAR + ' ' + Selector.CONTROL_SIDEBAR_CONTENT).css('height', heights.window - (heights.footer - positions.bottom))
           } else {
@@ -226,14 +226,14 @@ const ControlSidebar = (($) => {
         }
 
         $(Selector.CONTROL_SIDEBAR + ' ' + Selector.CONTROL_SIDEBAR_CONTENT).css('height', sidebarHeight)
-        
+
         if (typeof $.fn.overlayScrollbars !== 'undefined') {
           $(Selector.CONTROL_SIDEBAR + ' ' + Selector.CONTROL_SIDEBAR_CONTENT).overlayScrollbars({
-            className       : this._config.scrollbarTheme,
-            sizeAutoCapable : true,
-            scrollbars : {
-              autoHide: this._config.scrollbarAutoHide, 
-              clickScrolling : true
+            className: this._config.scrollbarTheme,
+            sizeAutoCapable: true,
+            scrollbars: {
+              autoHide: this._config.scrollbarAutoHide,
+              clickScrolling: true
             }
           })
         }
@@ -280,7 +280,7 @@ const ControlSidebar = (($) => {
 
   $.fn[NAME] = ControlSidebar._jQueryInterface
   $.fn[NAME].Constructor = ControlSidebar
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return ControlSidebar._jQueryInterface
   }

@@ -11,11 +11,11 @@ const DirectChat = (($) => {
    * ====================================================
    */
 
-  const NAME               = 'DirectChat'
-  const DATA_KEY           = 'lte.directchat'
-  const EVENT_KEY          = `.${DATA_KEY}`
+  const NAME = 'DirectChat'
+  const DATA_KEY = 'lte.directchat'
+  const EVENT_KEY = `.${DATA_KEY}`
   const JQUERY_NO_CONFLICT = $.fn[NAME]
-  const DATA_API_KEY       = '.data-api'
+  const DATA_API_KEY = '.data-api'
 
   const Event = {
     TOGGLED: `toggled{EVENT_KEY}`
@@ -51,7 +51,7 @@ const DirectChat = (($) => {
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        let data      = $(this).data(DATA_KEY)
+        let data = $(this).data(DATA_KEY)
 
         if (!data) {
           data = new DirectChat($(this))
@@ -81,7 +81,7 @@ const DirectChat = (($) => {
 
   $.fn[NAME] = DirectChat._jQueryInterface
   $.fn[NAME].Constructor = DirectChat
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return DirectChat._jQueryInterface
   }

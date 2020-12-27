@@ -11,18 +11,18 @@ const SiteSearch = (($) => {
    * ====================================================
    */
 
-  const NAME               = 'SiteSearch'
-  const DATA_KEY           = 'lte.site-search'
-  const EVENT_KEY          = `.${DATA_KEY}`
+  const NAME = 'SiteSearch'
+  const DATA_KEY = 'lte.site-search'
+  const EVENT_KEY = `.${DATA_KEY}`
   const JQUERY_NO_CONFLICT = $.fn[NAME]
 
   const Event = {}
 
   const Selector = {
-    TOGGLE_BUTTON  : '[data-widget="site-search"]',
-    SEARCH_BLOCK   : '.site-search-block',
+    TOGGLE_BUTTON: '[data-widget="site-search"]',
+    SEARCH_BLOCK: '.site-search-block',
     SEARCH_BACKDROP: '.site-search-backdrop',
-    SEARCH_INPUT   : '.site-search-block .form-control'
+    SEARCH_INPUT: '.site-search-block .form-control'
   }
 
   const ClassName = {
@@ -116,7 +116,7 @@ const SiteSearch = (($) => {
 
   $.fn[NAME] = SiteSearch._jQueryInterface
   $.fn[NAME].Constructor = SiteSearch
-  $.fn[NAME].noConflict  = function () {
+  $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return SiteSearch._jQueryInterface
   }

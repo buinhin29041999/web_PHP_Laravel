@@ -7,7 +7,7 @@
 (function ($) {
   'use strict'
 
-  var $sidebar   = $('.control-sidebar')
+  var $sidebar = $('.control-sidebar')
   var $container = $('<div />', {
     class: 'p-3 control-sidebar-content'
   })
@@ -44,8 +44,8 @@
   )
 
   var $no_border_checkbox = $('<input />', {
-    type   : 'checkbox',
-    value  : 1,
+    type: 'checkbox',
+    value: 1,
     checked: $('.main-header').hasClass('border-bottom-0'),
     'class': 'mr-1'
   }).on('click', function () {
@@ -59,8 +59,8 @@
   $container.append($no_border_container)
 
   var $text_sm_body_checkbox = $('<input />', {
-    type   : 'checkbox',
-    value  : 1,
+    type: 'checkbox',
+    value: 1,
     checked: $('body').hasClass('text-sm'),
     'class': 'mr-1'
   }).on('click', function () {
@@ -74,8 +74,8 @@
   $container.append($text_sm_body_container)
 
   var $text_sm_header_checkbox = $('<input />', {
-    type   : 'checkbox',
-    value  : 1,
+    type: 'checkbox',
+    value: 1,
     checked: $('.main-header').hasClass('text-sm'),
     'class': 'mr-1'
   }).on('click', function () {
@@ -89,8 +89,8 @@
   $container.append($text_sm_header_container)
 
   var $text_sm_sidebar_checkbox = $('<input />', {
-    type   : 'checkbox',
-    value  : 1,
+    type: 'checkbox',
+    value: 1,
     checked: $('.nav-sidebar').hasClass('text-sm'),
     'class': 'mr-1'
   }).on('click', function () {
@@ -104,8 +104,8 @@
   $container.append($text_sm_sidebar_container)
 
   var $text_sm_footer_checkbox = $('<input />', {
-    type   : 'checkbox',
-    value  : 1,
+    type: 'checkbox',
+    value: 1,
     checked: $('.main-footer').hasClass('text-sm'),
     'class': 'mr-1'
   }).on('click', function () {
@@ -119,8 +119,8 @@
   $container.append($text_sm_footer_container)
 
   var $flat_sidebar_checkbox = $('<input />', {
-    type   : 'checkbox',
-    value  : 1,
+    type: 'checkbox',
+    value: 1,
     checked: $('.nav-sidebar').hasClass('nav-flat'),
     'class': 'mr-1'
   }).on('click', function () {
@@ -134,8 +134,8 @@
   $container.append($flat_sidebar_container)
 
   var $legacy_sidebar_checkbox = $('<input />', {
-    type   : 'checkbox',
-    value  : 1,
+    type: 'checkbox',
+    value: 1,
     checked: $('.nav-sidebar').hasClass('nav-legacy'),
     'class': 'mr-1'
   }).on('click', function () {
@@ -149,8 +149,8 @@
   $container.append($legacy_sidebar_container)
 
   var $compact_sidebar_checkbox = $('<input />', {
-    type   : 'checkbox',
-    value  : 1,
+    type: 'checkbox',
+    value: 1,
     checked: $('.nav-sidebar').hasClass('nav-compact'),
     'class': 'mr-1'
   }).on('click', function () {
@@ -164,8 +164,8 @@
   $container.append($compact_sidebar_container)
 
   var $child_indent_sidebar_checkbox = $('<input />', {
-    type   : 'checkbox',
-    value  : 1,
+    type: 'checkbox',
+    value: 1,
     checked: $('.nav-sidebar').hasClass('nav-child-indent'),
     'class': 'mr-1'
   }).on('click', function () {
@@ -179,8 +179,8 @@
   $container.append($child_indent_sidebar_container)
 
   var $no_expand_sidebar_checkbox = $('<input />', {
-    type   : 'checkbox',
-    value  : 1,
+    type: 'checkbox',
+    value: 1,
     checked: $('.main-sidebar').hasClass('sidebar-no-expand'),
     'class': 'mr-1'
   }).on('click', function () {
@@ -194,8 +194,8 @@
   $container.append($no_expand_sidebar_container)
 
   var $text_sm_brand_checkbox = $('<input />', {
-    type   : 'checkbox',
-    value  : 1,
+    type: 'checkbox',
+    value: 1,
     checked: $('.brand-link').hasClass('text-sm'),
     'class': 'mr-1'
   }).on('click', function () {
@@ -210,10 +210,10 @@
 
   $container.append('<h6>Navbar Variants</h6>')
 
-  var $navbar_variants        = $('<div />', {
+  var $navbar_variants = $('<div />', {
     'class': 'd-flex'
   })
-  var navbar_all_colors       = navbar_dark_skins.concat(navbar_light_skins)
+  var navbar_all_colors = navbar_dark_skins.concat(navbar_light_skins)
   var $navbar_variants_colors = createSkinBlock(navbar_all_colors, function (e) {
     var color = $(this).data('color')
     var $main_header = $('.main-header')
@@ -314,9 +314,9 @@
   })
   $container.append($accent_variants)
   $container.append(createSkinBlock(accent_colors, function () {
-    var color         = $(this).data('color')
+    var color = $(this).data('color')
     var accent_class = color
-    var $body      = $('body')
+    var $body = $('body')
     accent_colors.map(function (skin) {
       $body.removeClass(skin)
     })
@@ -330,9 +330,9 @@
   })
   $container.append($sidebar_variants_dark)
   $container.append(createSkinBlock(sidebar_colors, function () {
-    var color         = $(this).data('color')
+    var color = $(this).data('color')
     var sidebar_class = 'sidebar-dark-' + color.replace('bg-', '')
-    var $sidebar      = $('.main-sidebar')
+    var $sidebar = $('.main-sidebar')
     sidebar_skins.map(function (skin) {
       $sidebar.removeClass(skin)
     })
@@ -346,9 +346,9 @@
   })
   $container.append($sidebar_variants_light)
   $container.append(createSkinBlock(sidebar_colors, function () {
-    var color         = $(this).data('color')
+    var color = $(this).data('color')
     var sidebar_class = 'sidebar-light-' + color.replace('bg-', '')
-    var $sidebar      = $('.main-sidebar')
+    var $sidebar = $('.main-sidebar')
     sidebar_skins.map(function (skin) {
       $sidebar.removeClass(skin)
     })
@@ -394,19 +394,19 @@
       $color.data('color', color)
 
       $color.css({
-        width       : '40px',
-        height      : '20px',
+        width: '40px',
+        height: '20px',
         borderRadius: '25px',
-        marginRight : 10,
+        marginRight: 10,
         marginBottom: 10,
-        opacity     : 0.8,
-        cursor      : 'pointer'
+        opacity: 0.8,
+        cursor: 'pointer'
       })
 
       $color.hover(function () {
-        $(this).css({ opacity: 1 }).removeClass('elevation-2').addClass('elevation-4')
+        $(this).css({opacity: 1}).removeClass('elevation-2').addClass('elevation-4')
       }, function () {
-        $(this).css({ opacity: 0.8 }).removeClass('elevation-4').addClass('elevation-2')
+        $(this).css({opacity: 0.8}).removeClass('elevation-4').addClass('elevation-2')
       })
 
       if (callback) {
@@ -417,7 +417,7 @@
     return $block
   }
 
-  $('.product-image-thumb').on('click', function() {
+  $('.product-image-thumb').on('click', function () {
     const image_element = $(this).find('img');
     $('.product-image').prop('src', $(image_element).attr('src'))
     $('.product-image-thumb.active').removeClass('active');
