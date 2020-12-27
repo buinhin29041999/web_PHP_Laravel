@@ -115,10 +115,11 @@ class UserController extends Controller
         $credentials = array('email' => $req->email, 'password' => $req->password);
         if (Auth::attempt($credentials))
             return redirect()->route('trang-chu');
-        else return redirect()->back()->with(['flag' => 'danger','message'=> 'Đăng nhập thất bại']);
+        else return redirect()->back()->with(['flag' => 'danger', 'message' => 'Đăng nhập thất bại! Email hoặc mật khẩu không đúng']);
     }
-    public function getLogout(){
+    public function getLogout()
+    {
         Auth::logout();
-        return redirect() -> route('login');
+        return redirect()->route('login');
     }
 }

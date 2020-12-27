@@ -37,8 +37,7 @@
                 <a href="#" class="dropdown-item">
                     <!-- Message Start -->
                     <div class="media">
-                        <img src="{{ asset('adminlte/dist/img/user1-128x128.jpg') }}" alt="User Avatar"
-                             class="img-size-50 mr-3 img-circle">
+                        <img src="{{ asset('adminlte/dist/img/user1-128x128.jpg') }}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                         <div class="media-body">
                             <h3 class="dropdown-item-title">
                                 Brad Diesel
@@ -54,8 +53,7 @@
                 <a href="#" class="dropdown-item">
                     <!-- Message Start -->
                     <div class="media">
-                        <img src="{{ asset('adminlte/dist/img/user8-128x128.jpg') }}" alt="User Avatar"
-                             class="img-size-50 img-circle mr-3">
+                        <img src="{{ asset('adminlte/dist/img/user8-128x128.jpg') }}" alt="User Avatar" class="img-size-50 img-circle mr-3">
                         <div class="media-body">
                             <h3 class="dropdown-item-title">
                                 John Pierce
@@ -71,8 +69,7 @@
                 <a href="#" class="dropdown-item">
                     <!-- Message Start -->
                     <div class="media">
-                        <img src="{{ asset('adminlte/dist/img/user3-128x128.jpg') }}" alt="User Avatar"
-                             class="img-size-50 img-circle mr-3">
+                        <img src="{{ asset('adminlte/dist/img/user3-128x128.jpg') }}" alt="User Avatar" class="img-size-50 img-circle mr-3">
                         <div class="media-body">
                             <h3 class="dropdown-item-title">
                                 Nora Silvester
@@ -115,10 +112,13 @@
                 <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
             </div>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
-                    class="fa fa-th-large"></i></a>
+        @if(Auth::check())
+        <li>
+            Chào bạn {{Auth::user() -> name}}
+            <a href="admin-logout"><i class="fa fa-sign-out"></i>Đăng xuất</a>
         </li>
+        @else <li><a href="admin"><i class="fa fa-lock"></i>Đăng nhập</a></li>
+        @endif
     </ul>
 </nav>
 <!-- /.navbar -->

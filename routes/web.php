@@ -6,6 +6,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin', 'AdminController@loginAdmin');
 Route::post('/admin', 'AdminController@postLoginAdmin');
 
+
+Route::get('admin-logout', [
+    'as' => 'admin-logout',
+    'uses' => 'AdminController@getLogoutAdmin'
+]);
+
+
 Route::get('/home', function () {
     return view('home');
 });

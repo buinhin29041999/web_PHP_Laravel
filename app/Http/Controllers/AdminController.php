@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -18,11 +19,18 @@ class AdminController extends Controller
     {
 
         $remenber = $request->has('remember_me') ? true : false;
-        if (auth()->attempt([
+        if (auth()-> attempt([
             'email' => $request->email,
             'password' => $request->password
         ], $remenber)) {
             return redirect()->to('home');
         }
+    }
+
+   
+    public function getLogoutAdmin()
+    {
+        Auth::logout();
+        return view('login');
     }
 }
